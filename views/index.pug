@@ -1,0 +1,16 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    h1.Banner RGIPT
+    div.Message
+      div.Title
+        h3 Login here
+      span.Details Access the RGIPT Student  Portal
+    div.NavButtons
+      if isAuthenticated
+        a(href="/user")
+          div.NavButton Just dive in!
+      else
+        a(href="/login")
+          div.NavButton Log in
